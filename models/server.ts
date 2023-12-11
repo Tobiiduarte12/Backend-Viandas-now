@@ -1,9 +1,9 @@
 import express, { Express } from "express";
-import cors from "cors";
 import authRoutes from "../routes/auth";
 import { dbConnection } from "../dataBase/config";
 import orderRoutes from "../routes/orders";
 import issuesRoutes from "../routes/issues";
+import cors from "cors";
 
 export class Server {
   app: Express;
