@@ -13,11 +13,11 @@ router.post(
     check("email", "El email es obligatorio").not().isEmpty().isEmail(),
     check(
       "password",
-      "La contraseña es obligatoria y debe tener al menos 8 caracteres"
+      "La contraseña es obligatoria y debe tener al menos 6 caracteres"
     )
       .not()
       .isEmpty()
-      .isLength({ min: 8 }),
+      .isLength({ min: 6 }),
     check("email").custom(emailExisting),
     errorRecolector,
   ],
@@ -31,9 +31,9 @@ router.post(
     check("email", "El email no es válido").isEmail(),
     check(
       "password",
-      "La contraseña debe tener al menos 8 caracteres"
+      "La contraseña debe tener al menos 6 caracteres"
     ).isLength({
-      min: 8,
+      min: 6,
     }),
     errorRecolector,
   ],
