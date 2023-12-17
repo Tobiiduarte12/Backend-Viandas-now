@@ -4,7 +4,7 @@ export const dbConnection = async (): Promise<void> => {
   try {
     const dbURL = process.env.DB_URL;
     if (!dbURL) {
-      throw new Error("No se encontró la URL de la base de datos");
+      throw new Error("URL no encontrada en la base de datos");
     }
 
     await mongoose.connect(dbURL);
