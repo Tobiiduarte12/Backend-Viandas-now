@@ -42,7 +42,7 @@ const OrderSchema = new Schema<IOrder>({
         id: { type: Number, required: true },
         price: { type: Number, required: true },
         quantity: { type: Number, required: true },
-        tittle: { type: String, required: true },
+        title: { type: String, required: true },
       },
     ],
     required: true,
